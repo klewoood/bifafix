@@ -7,6 +7,7 @@ package com.endro.bifa.dao;
 
 import com.endro.bifa.entity.User;
 import com.endro.bifa.error.BifaExeption;
+import java.util.List;
 
 /**
  *
@@ -22,5 +23,5 @@ public interface UserDao {
     
     public User getByIdUser(Integer id_clien) throws BifaExeption;
     
-    public User getAll() throws BifaExeption;
+    public List<User> getAll() throws BifaExeption;
 }
