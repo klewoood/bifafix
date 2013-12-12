@@ -8,23 +8,24 @@ package com.endro.bifa.error;
 
 /**
  *
- * @author bumijonet
+ * @author klewoood
  */
-public class BifaError extends Exception {
+public class BifaExeption extends Exception {
 
     /**
-     * Creates a new instance of <code>BifaError</code> without detail message.
+     * Creates a new instance of <code>BifaExeption</code> without detail
+     * message.
      */
-    public BifaError() {
+    public BifaExeption() {
     }
 
     /**
-     * Constructs an instance of <code>BifaError</code> with the specified
+     * Constructs an instance of <code>BifaExeption</code> with the specified
      * detail message.
      *
      * @param msg the detail message.
      */
-    public BifaError(String msg) {
+    public BifaExeption(String msg) {
         super(msg);
     }
 }
