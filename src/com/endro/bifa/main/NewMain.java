@@ -27,8 +27,20 @@ public class NewMain {
         // TODO code application logic here
         UserDao dao = Databases.getUser();
         
-        dao.deleteUser(666);
-                
+        User user = new User();
+        user.setId_clien(566);
+        user.setNama("Khabib");
+        user.setAlamat("Cilacap");
+        user.setJenis_kelamin("pria");
+        user.setPengenal("KTP");
+        user.setId_pengenal("5568978164");
+        user.setPekerjaan("Ngoperator warnet");
+        user.setTgl_lahir(new Date());
+        user.setTelephone("68575669691");
+        user.setMaksud_kedatangan("Surver");
+        user.setId_resepsionis(7);
+        
+        dao.insertUser(user);
     }
     
 }

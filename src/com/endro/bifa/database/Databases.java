@@ -26,7 +26,7 @@ public class Databases {
 
             msSource.setURL("jdbc:mysql://localhost:3306/bifa");
             msSource.setUser("root");
-            msSource.setPassword("G3LaCKVz");
+            msSource.setPassword("bumijonet");
 
             koneksi = msSource.getConnection();
         }
