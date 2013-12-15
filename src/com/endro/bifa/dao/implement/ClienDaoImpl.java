@@ -5,7 +5,7 @@
  */
 package com.endro.bifa.dao.implement;
 
-import com.endro.bifa.dao.UserDao;
+import com.endro.bifa.dao.ClienDao;
 import com.endro.bifa.entity.User;
 import com.endro.bifa.error.BifaExeption;
 import java.sql.Connection;
@@ -23,11 +23,11 @@ import java.util.logging.Logger;
  *
  * @author klewoood
  */
-public class UserDaoImpl implements UserDao {
+public class ClienDaoImpl implements ClienDao {
 
     private Connection koneksi;
 
-    public UserDaoImpl(Connection koneksi) {
+    public ClienDaoImpl(Connection koneksi) {
         this.koneksi = koneksi;
     }
 
@@ -62,7 +62,7 @@ public class UserDaoImpl implements UserDao {
             try {
                 koneksi.rollback();
             } catch (SQLException ex1) {
-                Logger.getLogger(UserDaoImpl.class.getName()).log(Level.SEVERE, null, ex1);
+                Logger.getLogger(ClienDaoImpl.class.getName()).log(Level.SEVERE, null, ex1);
             }
             throw new BifaExeption(ex.getMessage());
         } finally {

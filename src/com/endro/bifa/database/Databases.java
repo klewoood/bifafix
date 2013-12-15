@@ -5,8 +5,8 @@
  */
 package com.endro.bifa.database;
 
-import com.endro.bifa.dao.UserDao;
-import com.endro.bifa.dao.implement.UserDaoImpl;
+import com.endro.bifa.dao.ClienDao;
+import com.endro.bifa.dao.implement.ClienDaoImpl;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -18,7 +18,7 @@ import java.sql.SQLException;
 public class Databases {
 
     private static Connection koneksi;
-    private static UserDao user;
+    private static ClienDao user;
 
     public static Connection getKoneksi() throws SQLException {
         if (koneksi == null) {
@@ -26,16 +26,16 @@ public class Databases {
 
             msSource.setURL("jdbc:mysql://localhost:3306/bifa");
             msSource.setUser("root");
-            msSource.setPassword("bumijonet");
+            msSource.setPassword("G3LaCKVz");
 
             koneksi = msSource.getConnection();
         }
         return koneksi;
     }
 
-    public static UserDao getUser() throws SQLException {
+    public static ClienDao getUser() throws SQLException {
         if(user==null){
-            user = new UserDaoImpl(getKoneksi());
+            user = new ClienDaoImpl(getKoneksi());
         }
         return user;
     }

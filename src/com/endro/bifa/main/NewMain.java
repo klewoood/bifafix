@@ -6,7 +6,7 @@
 
 package com.endro.bifa.main;
 
-import com.endro.bifa.dao.UserDao;
+import com.endro.bifa.dao.ClienDao;
 import com.endro.bifa.database.Databases;
 import com.endro.bifa.entity.User;
 import com.endro.bifa.error.BifaExeption;
@@ -25,7 +25,7 @@ public class NewMain {
      */
     public static void main(String[] args) throws SQLException, BifaExeption {
         // TODO code application logic here
-        UserDao dao = Databases.getUser();
+       ClienDao dao = Databases.getUser();
         
         User user = new User();
         user.setId_clien(566);

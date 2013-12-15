@@ -13,7 +13,7 @@ import java.util.List;
  *
  * @author klewoood
  */
-public interface UserDao {
+public interface ClienDao {
 
     public void insertUser(User user) throws BifaExeption;
     
